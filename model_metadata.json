@@ -1,13 +1,18 @@
 {
   "model": "CatBoostRegressor",
-  "loss": "MAE",
-  "depth": 6,
+  "target": "posted_rate / distance",
+  "depth": 5,
   "learning_rate": 0.05,
-  "iterations": 300,
+  "l2_leaf_reg": 5,
+  "iterations": 170,
   "random_seed": 42,
-  "holdout": "October 2025",
-  "holdout_rows": 4853,
-  "holdout_mae": 107.98698359486004,
-  "holdout_rmse": 646.4616021097404,
-  "holdout_r2": 0.8211361972398775
+  "october_holdout": {
+    "MAE": 102.78566532606237,
+    "RMSE": 646.894784133286,
+    "R2": 0.8208964102427148,
+    "best_iteration": 170
+  },
+  "training_data": "data/train_test.csv",
+  "final_prediction_data": "data/validation.csv",
+  "december_prediction_data": "data/december_chart_inputs.csv"
 }
